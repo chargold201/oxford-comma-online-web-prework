@@ -5,6 +5,10 @@ def oxford_comma(array)
     array.join(" and ")
   else
     new_array = array[0...-1]
-
+    string = ""
+    new_array.each do |item|
+      string << item + ", "
+    end
+    string << "and " + array[-1]
   end
 end
